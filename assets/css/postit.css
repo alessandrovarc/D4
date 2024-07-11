@@ -15,7 +15,7 @@ body {
 }
 
 .container {
-    background-color: blue;
+    background-color: rgb(139, 139, 177);
     border: 2px solid black;
     width: 80em;
     height: 55em;
@@ -58,21 +58,37 @@ body {
     transform: skew(30deg);
 }
 .pink {
-    transform: translate(0px, 40px);
     transform: skew(355deg, 24deg);
-    background-color: rgb(255, 211, 218)
+    background-color: rgb(255, 211, 218);
+    animation: animated 8s infinite;
 }
-.pink animated {
-    animation: animated 4s linear 0 ;
-}
+
 @keyframes animated {
     0% {
+        transform: rotate(0);
 
     }
     50% {
-        transform:rotate(300deg);
+
+        transform: rotate(300deg);
+    }
+   100% {
+    transform: rotate(0);
+   }
+}
+
+.red {
+    background-color: rgb(255, 27, 27);
+    animation: changeColor 5s infinite;
+}
+@keyframes changeColor {
+    0% {
+        background-color: rgb(255, 21, 21);
+    }
+    50% {
+        background-color: rgb(174, 0, 255);
     }
     100% {
-        
+        background-color: rgb(255, 35, 35);
     }
 }
